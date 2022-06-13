@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+<link rel="shortcut icon" href="{{url('images/logo.png')}}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -17,11 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="shortcut icon" href="{{url('images/programmer.png')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/@fortawesome/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/live-resume.css') }}">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href='assets/css/live-resume.css'>
 </head>
 <body>
     <header>
@@ -29,11 +30,12 @@
             SHARE</button>
            
         <nav class="collapsible-nav right" id="collapsible-nav">
-            <a href="{{url('/')}}" class="nav-link @if($header == "home") active @endif">HOME</a>
+            {{-- <a href="{{url('/')}}" class="nav-link @if($header == "home") active @endif">HOME</a> --}}
             <a href="{{url('/resume')}}" class="nav-link  @if($header == "resume") active @endif">RESUME</a>
             <a href="{{url('/portfolio')}}" class="nav-link">PORTFOLIO</a>
             <a href="{{url('/skills')}}" class="nav-link">SKILLS</a>
             <a href="{{url('/contact')}}" class="nav-link">CONTACT</a>
+            <a href="{{url('/login')}}" target="_blank" class="nav-link">LOGIN</a>
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"  data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
     </header>
@@ -174,9 +176,9 @@
         @yield('content')
     </div>
 
-    <script src="{{ asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/@popperjs/core/dist/umd/popper-base.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/live-resume.js') }}"></script>
+    <script src='assets/vendors/jquery/dist/jquery.min.js'></script>
+    <script src='assets/vendors/@popperjs/core/dist/umd/popper-base.min.js'></script>
+    <script src='assets/vendors/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script src='assets/js/live-resume.js'></script>
 </body>
 </html>
