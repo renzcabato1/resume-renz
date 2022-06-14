@@ -7683,7 +7683,7 @@ main {
         height: 10px;
         border-radius: 50%;
         background-color: #979797; }
-      main .time-line-item:nth-child(2n)::after {
+      main .time-line-item .active{
         background-color: #0067f6; }
       main .time-line-item:not(:first-child)::after {
         top: 5px; }
@@ -7717,8 +7717,6 @@ main {
   main .service-card {
     padding-top: 11px;
     padding-bottom: 11px; }
-    main .service-card:first-child, main .service-card:nth-child(3) {
-      border-right: 1px solid #f3f3f3; }
       @media (max-width: 991px) {
         main .service-card:first-child, main .service-card:nth-child(3) {
           border-right: 0; } }
