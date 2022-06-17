@@ -30,7 +30,7 @@
              
                 <div class="service-icons text-center">
                   
-                    <img src="skills/{{$skill->tool}}.png" alt="target" class='' title='{{$skill->tool}}'> 
+                    <img src="skillss/{{$skill->tool}}.png" alt="target" class='' title='{{$skill->tool}}'> 
                     <br>
                     <span class='text-center'>{{$skill->tool}}</span>
                     
