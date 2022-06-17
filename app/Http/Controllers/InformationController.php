@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Information;
 use App\Education;
 use App\Hobby;
+use App\SkillType;
+use App\Service;
 use Illuminate\Http\Request;
 
 class InformationController extends Controller
@@ -24,12 +26,16 @@ class InformationController extends Controller
         $information = Information::first();
         $educations = Education::orderBy('id','desc')->get();
         $hobbies = Hobby::get();
+        $skillTypes = SkillType::with('skills')->get();
+        $services = Service::get();
         return view('resume',
         array(
             'header' => 'resume',
             'information' => $information,
             'hobbies' => $hobbies,
             'educations' => $educations,
+            'skillTypes' => $skillTypes,
+            'services' => $services,
         ));
     }
 }

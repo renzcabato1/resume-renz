@@ -39,23 +39,23 @@
 </head>
 <body>
     <header>
-        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
-            SHARE</button>
+        {{-- <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
+            SHARE</button> --}}
            
-        <nav class="collapsible-nav right" id="collapsible-nav">
+        <nav class="collapsible-nav" id="collapsible-nav">
             {{-- <a href="{{url('/')}}" class="nav-link @if($header == "home") active @endif">HOME</a> --}}
-            <a href="{{url('/resume')}}" class="nav-link  @if($header == "resume") active @endif">RESUME</a>
-            <a href="{{url('/portfolio')}}" class="nav-link">PORTFOLIO</a>
-            <a href="{{url('/skills')}}" class="nav-link">SKILLS</a>
-            <a href="{{url('/contact')}}" class="nav-link">CONTACT</a>
-            <a href="{{url('/login')}}" target="_blank" class="nav-link">LOGIN</a>
+            <a href="{{url('/resume#resume')}}" class="nav-link">RESUME</a>
+            <a href="{{url('/resume#skills')}}" class="nav-link">SKILLS</a>
+            <a href="{{url('/resume#portfolio')}}" class="nav-link">PORTFOLIO</a>
+            <a href="{{url('/resume#history')}}" class="nav-link">HISTORY</a>
+            <a href="{{url('/resume#contact')}}" class="nav-link">CONTACT</a>
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"  data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
     </header>
     <div class="content-wrapper">
         <aside>
             <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
+                {{-- <img src="assets/images/Profile.png" alt="profile"> --}}
             </div>
             <h1 class="profile-name">{{$information->name}}</h1>
             <div class="text-center">
@@ -68,8 +68,8 @@
                 <a href="{{$information->github}}" target='_blank' class="social-link"><i class="fab fa-github"></i></a>
             </nav>
             <div class="widget">
-            <a href='{{url($information->resume)}}' target="_blank"><button class="btn btn-download-cv btn-primary rounded-pill"> <img  src="{{url('assets/images/download.svg')}}" target="_blank" alt="download"
-                class="btn-img">DOWNLOAD CV </button></a>
+                <a href='{{url($information->resume)}}' target="_blank"><button class="btn btn-download-cv btn-primary rounded-pill"> <img  src="{{url('assets/images/download.svg')}}" target="_blank" alt="download"
+                    class="btn-img">DOWNLOAD CV </button></a>
             </div>
             <div class="widget">
                 <h5 class="widget-title text-left">personal information</h5>
